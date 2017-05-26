@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AuthorisationHandler.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,9 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _authorisationHandler = [AuthorisationHandler new];
     return YES;
 }
 

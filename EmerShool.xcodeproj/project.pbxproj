@@ -9,11 +9,23 @@
 /* Begin PBXBuildFile section */
 		8C630F4E1ED86E43002963A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F4D1ED86E42002963A2 /* main.m */; };
 		8C630F511ED86E43002963A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F501ED86E43002963A2 /* AppDelegate.m */; };
-		8C630F541ED86E43002963A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F531ED86E43002963A2 /* ViewController.m */; };
 		8C630F571ED86E43002963A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F551ED86E43002963A2 /* LaunchScreen.storyboard */; };
 		8C630F5A1ED86E43002963A2 /* EmerShool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F581ED86E43002963A2 /* EmerShool.xcdatamodeld */; };
 		8C630F5C1ED86E43002963A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F5B1ED86E43002963A2 /* Assets.xcassets */; };
 		8C630F5F1ED86E43002963A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F5D1ED86E43002963A2 /* Main.storyboard */; };
+		8C630F681ED877CC002963A2 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F671ED877CC002963A2 /* BaseViewController.m */; };
+		8C630F6C1ED87803002963A2 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F6B1ED87803002963A2 /* MyProfileViewController.m */; };
+		8C630F6F1ED87F0B002963A2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F6E1ED87F0B002963A2 /* LoginViewController.m */; };
+		8C630F721ED87F23002963A2 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F711ED87F23002963A2 /* SignUpViewController.m */; };
+		8C630F751ED883BF002963A2 /* BaseAsyncOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F741ED883BF002963A2 /* BaseAsyncOperation.m */; };
+		8C630F791ED8854D002963A2 /* LoginOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F781ED8854D002963A2 /* LoginOp.m */; };
+		8C630F7C1ED8855C002963A2 /* SignUpOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F7B1ED8855C002963A2 /* SignUpOp.m */; };
+		8C630F7F1ED88D20002963A2 /* BaseServerRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F7E1ED88D20002963A2 /* BaseServerRequestOperation.m */; };
+		8C630F861ED88E20002963A2 /* AuthorisationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F851ED88E20002963A2 /* AuthorisationHandler.m */; };
+		8C630F891ED8997A002963A2 /* Credits.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F881ED8997A002963A2 /* Credits.plist */; };
+		8C630F8E1ED89A1C002963A2 /* baby-boy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8B1ED89A1C002963A2 /* baby-boy@3x.png */; };
+		8C630F8F1ED89A1C002963A2 /* couple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8C1ED89A1C002963A2 /* couple@3x.png */; };
+		8C630F901ED89A1C002963A2 /* family@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8D1ED89A1C002963A2 /* family@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +33,33 @@
 		8C630F4D1ED86E42002963A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C630F4F1ED86E43002963A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C630F501ED86E43002963A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8C630F521ED86E43002963A2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8C630F531ED86E43002963A2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C630F561ED86E43002963A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C630F591ED86E43002963A2 /* EmerShool.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EmerShool.xcdatamodel; sourceTree = "<group>"; };
 		8C630F5B1ED86E43002963A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C630F5E1ED86E43002963A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C630F601ED86E43002963A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C630F661ED877CC002963A2 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8C630F671ED877CC002963A2 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8C630F6A1ED87803002963A2 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
+		8C630F6B1ED87803002963A2 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
+		8C630F6D1ED87F0B002963A2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8C630F6E1ED87F0B002963A2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8C630F701ED87F23002963A2 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		8C630F711ED87F23002963A2 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		8C630F731ED883BF002963A2 /* BaseAsyncOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAsyncOperation.h; sourceTree = "<group>"; };
+		8C630F741ED883BF002963A2 /* BaseAsyncOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAsyncOperation.m; sourceTree = "<group>"; };
+		8C630F771ED8854D002963A2 /* LoginOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOp.h; sourceTree = "<group>"; };
+		8C630F781ED8854D002963A2 /* LoginOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOp.m; sourceTree = "<group>"; };
+		8C630F7A1ED8855C002963A2 /* SignUpOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpOp.h; sourceTree = "<group>"; };
+		8C630F7B1ED8855C002963A2 /* SignUpOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpOp.m; sourceTree = "<group>"; };
+		8C630F7D1ED88D20002963A2 /* BaseServerRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseServerRequestOperation.h; sourceTree = "<group>"; };
+		8C630F7E1ED88D20002963A2 /* BaseServerRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseServerRequestOperation.m; sourceTree = "<group>"; };
+		8C630F841ED88E20002963A2 /* AuthorisationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthorisationHandler.h; sourceTree = "<group>"; };
+		8C630F851ED88E20002963A2 /* AuthorisationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthorisationHandler.m; sourceTree = "<group>"; };
+		8C630F881ED8997A002963A2 /* Credits.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credits.plist; sourceTree = "<group>"; };
+		8C630F8B1ED89A1C002963A2 /* baby-boy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby-boy@3x.png"; sourceTree = "<group>"; };
+		8C630F8C1ED89A1C002963A2 /* couple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "couple@3x.png"; sourceTree = "<group>"; };
+		8C630F8D1ED89A1C002963A2 /* family@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "family@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +94,16 @@
 			children = (
 				8C630F4F1ED86E43002963A2 /* AppDelegate.h */,
 				8C630F501ED86E43002963A2 /* AppDelegate.m */,
-				8C630F521ED86E43002963A2 /* ViewController.h */,
-				8C630F531ED86E43002963A2 /* ViewController.m */,
-				8C630F551ED86E43002963A2 /* LaunchScreen.storyboard */,
+				8C630F871ED88E26002963A2 /* Logic */,
+				8C630F691ED877D7002963A2 /* GUI */,
+				8C630F761ED883CF002963A2 /* Operations */,
 				8C630F5B1ED86E43002963A2 /* Assets.xcassets */,
 				8C630F5D1ED86E43002963A2 /* Main.storyboard */,
 				8C630F601ED86E43002963A2 /* Info.plist */,
 				8C630F581ED86E43002963A2 /* EmerShool.xcdatamodeld */,
+				8C630F881ED8997A002963A2 /* Credits.plist */,
+				8C630F8A1ED89A1C002963A2 /* Resources */,
+				8C630F551ED86E43002963A2 /* LaunchScreen.storyboard */,
 				8C630F4C1ED86E42002963A2 /* Supporting Files */,
 			);
 			path = EmerShool;
@@ -80,6 +115,63 @@
 				8C630F4D1ED86E42002963A2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8C630F691ED877D7002963A2 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				8C630F661ED877CC002963A2 /* BaseViewController.h */,
+				8C630F671ED877CC002963A2 /* BaseViewController.m */,
+				8C630F6A1ED87803002963A2 /* MyProfileViewController.h */,
+				8C630F6B1ED87803002963A2 /* MyProfileViewController.m */,
+				8C630F6D1ED87F0B002963A2 /* LoginViewController.h */,
+				8C630F6E1ED87F0B002963A2 /* LoginViewController.m */,
+				8C630F701ED87F23002963A2 /* SignUpViewController.h */,
+				8C630F711ED87F23002963A2 /* SignUpViewController.m */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		8C630F761ED883CF002963A2 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8C630F731ED883BF002963A2 /* BaseAsyncOperation.h */,
+				8C630F741ED883BF002963A2 /* BaseAsyncOperation.m */,
+				8C630F771ED8854D002963A2 /* LoginOp.h */,
+				8C630F781ED8854D002963A2 /* LoginOp.m */,
+				8C630F7A1ED8855C002963A2 /* SignUpOp.h */,
+				8C630F7B1ED8855C002963A2 /* SignUpOp.m */,
+				8C630F801ED88D2F002963A2 /* ServerOps */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
+		8C630F801ED88D2F002963A2 /* ServerOps */ = {
+			isa = PBXGroup;
+			children = (
+				8C630F7D1ED88D20002963A2 /* BaseServerRequestOperation.h */,
+				8C630F7E1ED88D20002963A2 /* BaseServerRequestOperation.m */,
+			);
+			name = ServerOps;
+			sourceTree = "<group>";
+		};
+		8C630F871ED88E26002963A2 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				8C630F841ED88E20002963A2 /* AuthorisationHandler.h */,
+				8C630F851ED88E20002963A2 /* AuthorisationHandler.m */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		8C630F8A1ED89A1C002963A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C630F8B1ED89A1C002963A2 /* baby-boy@3x.png */,
+				8C630F8C1ED89A1C002963A2 /* couple@3x.png */,
+				8C630F8D1ED89A1C002963A2 /* family@3x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +232,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C630F901ED89A1C002963A2 /* family@3x.png in Resources */,
 				8C630F5F1ED86E43002963A2 /* Main.storyboard in Resources */,
+				8C630F8F1ED89A1C002963A2 /* couple@3x.png in Resources */,
+				8C630F8E1ED89A1C002963A2 /* baby-boy@3x.png in Resources */,
+				8C630F891ED8997A002963A2 /* Credits.plist in Resources */,
 				8C630F5C1ED86E43002963A2 /* Assets.xcassets in Resources */,
 				8C630F571ED86E43002963A2 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -154,8 +250,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C630F5A1ED86E43002963A2 /* EmerShool.xcdatamodeld in Sources */,
-				8C630F541ED86E43002963A2 /* ViewController.m in Sources */,
+				8C630F751ED883BF002963A2 /* BaseAsyncOperation.m in Sources */,
+				8C630F7C1ED8855C002963A2 /* SignUpOp.m in Sources */,
+				8C630F791ED8854D002963A2 /* LoginOp.m in Sources */,
+				8C630F681ED877CC002963A2 /* BaseViewController.m in Sources */,
+				8C630F6F1ED87F0B002963A2 /* LoginViewController.m in Sources */,
+				8C630F6C1ED87803002963A2 /* MyProfileViewController.m in Sources */,
 				8C630F511ED86E43002963A2 /* AppDelegate.m in Sources */,
+				8C630F721ED87F23002963A2 /* SignUpViewController.m in Sources */,
+				8C630F861ED88E20002963A2 /* AuthorisationHandler.m in Sources */,
+				8C630F7F1ED88D20002963A2 /* BaseServerRequestOperation.m in Sources */,
 				8C630F4E1ED86E43002963A2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
