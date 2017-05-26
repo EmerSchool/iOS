@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rh9-6c-YgG">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBY-2M-zax">
-                                <rect key="frame" x="321" y="30" width="44" height="30"/>
+                                <rect key="frame" x="360" y="30" width="44" height="30"/>
                                 <state key="normal" title="выход"/>
                                 <connections>
                                     <action selector="logoffButtonPressed:" destination="01J-lp-oVM" eventType="touchUpInside" id="sVM-W9-jpQ"/>
@@ -54,7 +54,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cOj-gN-DT5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RdZ-s9-5uG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -73,7 +73,7 @@
                         <viewControllerLayoutGuide type="bottom" id="VwK-c5-0nV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fu9-Td-qgX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -127,23 +127,23 @@
                         <viewControllerLayoutGuide type="bottom" id="YVW-TH-Zmc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9b6-hG-wzf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xJC-3V-phS">
-                                <rect key="frame" x="77" y="154" width="221" height="30"/>
+                                <rect key="frame" x="77" y="154" width="260" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1pg-Ln-lpS">
-                                <rect key="frame" x="77" y="192" width="221" height="30"/>
+                                <rect key="frame" x="77" y="192" width="260" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UA4-6G-BsX">
-                                <rect key="frame" x="77" y="299" width="221" height="36"/>
+                                <rect key="frame" x="77" y="299" width="260" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="вход"/>
                                 <connections>
@@ -151,7 +151,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hq9-fz-gj4">
-                                <rect key="frame" x="77" y="343" width="221" height="30"/>
+                                <rect key="frame" x="77" y="343" width="260" height="30"/>
                                 <state key="normal" title="регистрация">
                                     <color key="titleColor" patternImage="button:Hq9-fz-gj4:patternImage" colorSpace="pattern"/>
                                 </state>
@@ -195,23 +195,23 @@
                         <viewControllerLayoutGuide type="bottom" id="Do5-dL-v44"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jwA-Bh-cBG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQt-a9-GyT">
-                                <rect key="frame" x="93" y="94" width="189" height="30"/>
+                                <rect key="frame" x="97" y="94" width="220" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0Z-La-SdZ">
-                                <rect key="frame" x="93" y="132" width="189" height="30"/>
+                                <rect key="frame" x="97" y="132" width="220" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ФИО" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRM-Xs-B0L">
-                                <rect key="frame" x="30" y="200" width="315" height="30"/>
+                                <rect key="frame" x="30" y="200" width="354" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -220,13 +220,13 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="инфо (дисциплина, etc.)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Is-Wh-lkh">
-                                <rect key="frame" x="30" y="238" width="315" height="30"/>
+                                <rect key="frame" x="30" y="238" width="354" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isC-bH-ZHo">
-                                <rect key="frame" x="30" y="307" width="315" height="36"/>
+                                <rect key="frame" x="30" y="307" width="354" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="регистрация"/>
                                 <connections>
@@ -266,7 +266,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baby-boy.png" width="64" height="64"/>
+        <image name="baby-boy.png" width="21" height="21"/>
         <image name="button:Hq9-fz-gj4:patternImage" width="256" height="256">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
@@ -4709,7 +4709,7 @@ AAQOmQAEDqEABA6kAAQOqQAEDrEABA60AAQOxgAEDskABA7OAAAAAAAABAEAAAAAAAAAQQAAAAAAAAAA
 AAAAAAAEDtA
 </mutableData>
         </image>
-        <image name="couple.png" width="64" height="64"/>
-        <image name="family.png" width="64" height="64"/>
+        <image name="couple.png" width="21" height="21"/>
+        <image name="family.png" width="21" height="21"/>
     </resources>
 </document>

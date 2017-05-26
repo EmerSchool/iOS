@@ -26,9 +26,12 @@
 		8C630F8E1ED89A1C002963A2 /* baby-boy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8B1ED89A1C002963A2 /* baby-boy@3x.png */; };
 		8C630F8F1ED89A1C002963A2 /* couple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8C1ED89A1C002963A2 /* couple@3x.png */; };
 		8C630F901ED89A1C002963A2 /* family@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8D1ED89A1C002963A2 /* family@3x.png */; };
+		E2528E8FABF32F7927FF59B5 /* libPods-EmerShool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D172CAFB2743B7683AD6ED /* libPods-EmerShool.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69ADB864EEE477092AB79E49 /* Pods-EmerShool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmerShool.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmerShool/Pods-EmerShool.release.xcconfig"; sourceTree = "<group>"; };
+		83D172CAFB2743B7683AD6ED /* libPods-EmerShool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EmerShool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C630F491ED86E42002963A2 /* EmerShool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmerShool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C630F4D1ED86E42002963A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C630F4F1ED86E43002963A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		8C630F8B1ED89A1C002963A2 /* baby-boy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby-boy@3x.png"; sourceTree = "<group>"; };
 		8C630F8C1ED89A1C002963A2 /* couple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "couple@3x.png"; sourceTree = "<group>"; };
 		8C630F8D1ED89A1C002963A2 /* family@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "family@3x.png"; sourceTree = "<group>"; };
+		B13E0280A32B56257942B9D1 /* Pods-EmerShool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmerShool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmerShool/Pods-EmerShool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +71,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2528E8FABF32F7927FF59B5 /* libPods-EmerShool.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1864158F04B8284451316EA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B13E0280A32B56257942B9D1 /* Pods-EmerShool.debug.xcconfig */,
+				69ADB864EEE477092AB79E49 /* Pods-EmerShool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		81306BA4E80262A737F6DFB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83D172CAFB2743B7683AD6ED /* libPods-EmerShool.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8C630F401ED86E42002963A2 = {
 			isa = PBXGroup;
 			children = (
 				8C630F4B1ED86E42002963A2 /* EmerShool */,
 				8C630F4A1ED86E42002963A2 /* Products */,
+				1864158F04B8284451316EA2 /* Pods */,
+				81306BA4E80262A737F6DFB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C630F631ED86E43002963A2 /* Build configuration list for PBXNativeTarget "EmerShool" */;
 			buildPhases = (
+				34610AF45E57E536256B7A4E /* [CP] Check Pods Manifest.lock */,
 				8C630F451ED86E42002963A2 /* Sources */,
 				8C630F461ED86E42002963A2 /* Frameworks */,
 				8C630F471ED86E42002963A2 /* Resources */,
+				9F06904801952C67CABF5F7B /* [CP] Embed Pods Frameworks */,
+				51342E45B483D8F1E415DEBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +271,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34610AF45E57E536256B7A4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		51342E45B483D8F1E415DEBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmerShool/Pods-EmerShool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F06904801952C67CABF5F7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmerShool/Pods-EmerShool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C630F451ED86E42002963A2 /* Sources */ = {
@@ -379,6 +454,7 @@
 		};
 		8C630F641ED86E43002963A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B13E0280A32B56257942B9D1 /* Pods-EmerShool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F2786Y2587;
@@ -391,6 +467,7 @@
 		};
 		8C630F651ED86E43002963A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69ADB864EEE477092AB79E49 /* Pods-EmerShool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F2786Y2587;
@@ -420,6 +497,7 @@
 				8C630F651ED86E43002963A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
