@@ -24,4 +24,9 @@
     }
 }
 
+- (IBAction)logoffButtonPressed:(id)sender {
+    [self.authHandler setAuthToken:nil];
+    [self performSegueWithIdentifier:@"PresentLoginScreen" sender:self];
+}
+
 @end

@@ -10,4 +10,6 @@
 
 @interface MyProfileViewController : BaseViewController
 
+- (IBAction)logoffButtonPressed:(id)sender;
+
 @end

@@ -18,7 +18,8 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:NO];
-    
 }
 
+- (IBAction)signUpButtonPressed:(id)sender {
+}
 @end

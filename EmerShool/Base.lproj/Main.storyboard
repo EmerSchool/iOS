@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBY-2M-zax">
+                                <rect key="frame" x="321" y="30" width="44" height="30"/>
+                                <state key="normal" title="выход"/>
+                                <connections>
+                                    <action selector="logoffButtonPressed:" destination="01J-lp-oVM" eventType="touchUpInside" id="sVM-W9-jpQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yBY-2M-zax" secondAttribute="trailing" constant="10" id="2Fo-6N-kxj"/>
+                            <constraint firstItem="yBY-2M-zax" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="10" id="May-Sd-LWh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Я" image="baby-boy.png" id="e6o-Je-i5Z"/>
                     <connections>
@@ -183,8 +197,68 @@
                     <view key="view" contentMode="scaleToFill" id="jwA-Bh-cBG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oQt-a9-GyT">
+                                <rect key="frame" x="93" y="94" width="189" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g0Z-La-SdZ">
+                                <rect key="frame" x="93" y="132" width="189" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ФИО" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRM-Xs-B0L">
+                                <rect key="frame" x="30" y="200" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="dSW-ny-suS" eventType="touchUpInside" id="te4-wR-Z0D"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="инфо (дисциплина, etc.)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Is-Wh-lkh">
+                                <rect key="frame" x="30" y="238" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isC-bH-ZHo">
+                                <rect key="frame" x="30" y="307" width="315" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="регистрация"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="ZDM-ht-b7h" eventType="touchUpInside" id="saC-4z-kVi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="isC-bH-ZHo" secondAttribute="trailing" constant="30" id="61Q-a4-YNw"/>
+                            <constraint firstAttribute="trailing" secondItem="6Is-Wh-lkh" secondAttribute="trailing" constant="30" id="BXh-Ll-4ho"/>
+                            <constraint firstItem="isC-bH-ZHo" firstAttribute="top" secondItem="6Is-Wh-lkh" secondAttribute="bottom" constant="39" id="C4h-rk-uaC"/>
+                            <constraint firstItem="g0Z-La-SdZ" firstAttribute="leading" secondItem="jwA-Bh-cBG" secondAttribute="leadingMargin" constant="77" id="Rmk-K7-N71"/>
+                            <constraint firstItem="oQt-a9-GyT" firstAttribute="leading" secondItem="jwA-Bh-cBG" secondAttribute="leadingMargin" constant="77" id="UYM-20-daF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oQt-a9-GyT" secondAttribute="trailing" constant="77" id="WX3-to-BBF"/>
+                            <constraint firstItem="hRM-Xs-B0L" firstAttribute="leading" secondItem="jwA-Bh-cBG" secondAttribute="leading" constant="30" id="aaj-jB-C11"/>
+                            <constraint firstItem="6Is-Wh-lkh" firstAttribute="top" secondItem="hRM-Xs-B0L" secondAttribute="bottom" constant="8" id="dq1-uv-UBR"/>
+                            <constraint firstItem="isC-bH-ZHo" firstAttribute="leading" secondItem="jwA-Bh-cBG" secondAttribute="leading" constant="30" id="eLc-Ud-o3J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g0Z-La-SdZ" secondAttribute="trailing" constant="77" id="m3k-tb-q09"/>
+                            <constraint firstAttribute="trailing" secondItem="hRM-Xs-B0L" secondAttribute="trailing" constant="30" id="mzX-gF-SDX"/>
+                            <constraint firstItem="g0Z-La-SdZ" firstAttribute="top" secondItem="oQt-a9-GyT" secondAttribute="bottom" constant="8" id="n4N-1I-TlB"/>
+                            <constraint firstItem="6Is-Wh-lkh" firstAttribute="leading" secondItem="jwA-Bh-cBG" secondAttribute="leading" constant="30" id="sK9-Cz-K4O"/>
+                            <constraint firstItem="hRM-Xs-B0L" firstAttribute="top" secondItem="g0Z-La-SdZ" secondAttribute="bottom" constant="38" id="spU-is-ocV"/>
+                            <constraint firstItem="oQt-a9-GyT" firstAttribute="top" secondItem="SRj-Fm-zZB" secondAttribute="bottom" constant="30" id="wsw-ma-P78"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fioField" destination="hRM-Xs-B0L" id="mP5-iC-yux"/>
+                        <outlet property="infoField" destination="6Is-Wh-lkh" id="mvF-tc-HDw"/>
+                        <outlet property="loginField" destination="oQt-a9-GyT" id="diV-3X-6XI"/>
+                        <outlet property="passwordField" destination="g0Z-La-SdZ" id="7dg-Y0-6J1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8w-Ke-uHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

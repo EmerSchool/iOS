@@ -10,7 +10,9 @@
 
 typedef NS_ENUM(NSInteger, ErrorCodeEnum) {
     ErrorCodeNA,
-    ErrorCodeOpCanceled
+    ErrorCodeOpCanceled,
+    ErrorCodeNoServerRequest,
+    ErrorCodeNoServerResponce
 };
 
 typedef void (^OpCompletionHandler)(NSError *error, id completionInfo);
