@@ -26,6 +26,11 @@
 		8C630F8E1ED89A1C002963A2 /* baby-boy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8B1ED89A1C002963A2 /* baby-boy@3x.png */; };
 		8C630F8F1ED89A1C002963A2 /* couple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8C1ED89A1C002963A2 /* couple@3x.png */; };
 		8C630F901ED89A1C002963A2 /* family@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F8D1ED89A1C002963A2 /* family@3x.png */; };
+		8E80AFED1ED8D740004ED08A /* TeacherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80AFEB1ED8D740004ED08A /* TeacherCell.m */; };
+		8E80AFEE1ED8D740004ED08A /* TeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E80AFEC1ED8D740004ED08A /* TeacherCell.xib */; };
+		8E80AFF11ED8D87D004ED08A /* TeachersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80AFF01ED8D87D004ED08A /* TeachersViewController.m */; };
+		8E80AFF41ED8D9BF004ED08A /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80AFF31ED8D9BF004ED08A /* BaseTableViewController.m */; };
+		8E80AFF71ED8DDF5004ED08A /* CellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80AFF61ED8DDF5004ED08A /* CellInfo.m */; };
 		E2528E8FABF32F7927FF59B5 /* libPods-EmerShool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D172CAFB2743B7683AD6ED /* libPods-EmerShool.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +68,15 @@
 		8C630F8B1ED89A1C002963A2 /* baby-boy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baby-boy@3x.png"; sourceTree = "<group>"; };
 		8C630F8C1ED89A1C002963A2 /* couple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "couple@3x.png"; sourceTree = "<group>"; };
 		8C630F8D1ED89A1C002963A2 /* family@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "family@3x.png"; sourceTree = "<group>"; };
+		8E80AFEA1ED8D740004ED08A /* TeacherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeacherCell.h; sourceTree = "<group>"; };
+		8E80AFEB1ED8D740004ED08A /* TeacherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeacherCell.m; sourceTree = "<group>"; };
+		8E80AFEC1ED8D740004ED08A /* TeacherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeacherCell.xib; sourceTree = "<group>"; };
+		8E80AFEF1ED8D87D004ED08A /* TeachersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachersViewController.h; sourceTree = "<group>"; };
+		8E80AFF01ED8D87D004ED08A /* TeachersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachersViewController.m; sourceTree = "<group>"; };
+		8E80AFF21ED8D9BF004ED08A /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		8E80AFF31ED8D9BF004ED08A /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		8E80AFF51ED8DDF5004ED08A /* CellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellInfo.h; sourceTree = "<group>"; };
+		8E80AFF61ED8DDF5004ED08A /* CellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellInfo.m; sourceTree = "<group>"; };
 		B13E0280A32B56257942B9D1 /* Pods-EmerShool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmerShool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmerShool/Pods-EmerShool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +158,7 @@
 		8C630F691ED877D7002963A2 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				8E80AFE91ED8D629004ED08A /* Cells */,
 				8C630F661ED877CC002963A2 /* BaseViewController.h */,
 				8C630F671ED877CC002963A2 /* BaseViewController.m */,
 				8C630F6A1ED87803002963A2 /* MyProfileViewController.h */,
@@ -152,6 +167,10 @@
 				8C630F6E1ED87F0B002963A2 /* LoginViewController.m */,
 				8C630F701ED87F23002963A2 /* SignUpViewController.h */,
 				8C630F711ED87F23002963A2 /* SignUpViewController.m */,
+				8E80AFEF1ED8D87D004ED08A /* TeachersViewController.h */,
+				8E80AFF01ED8D87D004ED08A /* TeachersViewController.m */,
+				8E80AFF21ED8D9BF004ED08A /* BaseTableViewController.h */,
+				8E80AFF31ED8D9BF004ED08A /* BaseTableViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -196,6 +215,18 @@
 				8C630F8D1ED89A1C002963A2 /* family@3x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E80AFE91ED8D629004ED08A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8E80AFEA1ED8D740004ED08A /* TeacherCell.h */,
+				8E80AFEB1ED8D740004ED08A /* TeacherCell.m */,
+				8E80AFEC1ED8D740004ED08A /* TeacherCell.xib */,
+				8E80AFF51ED8DDF5004ED08A /* CellInfo.h */,
+				8E80AFF61ED8DDF5004ED08A /* CellInfo.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +295,7 @@
 				8C630F5F1ED86E43002963A2 /* Main.storyboard in Resources */,
 				8C630F8F1ED89A1C002963A2 /* couple@3x.png in Resources */,
 				8C630F8E1ED89A1C002963A2 /* baby-boy@3x.png in Resources */,
+				8E80AFEE1ED8D740004ED08A /* TeacherCell.xib in Resources */,
 				8C630F891ED8997A002963A2 /* Credits.plist in Resources */,
 				8C630F5C1ED86E43002963A2 /* Assets.xcassets in Resources */,
 				8C630F571ED86E43002963A2 /* LaunchScreen.storyboard in Resources */,
@@ -326,15 +358,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C630F5A1ED86E43002963A2 /* EmerShool.xcdatamodeld in Sources */,
+				8E80AFF71ED8DDF5004ED08A /* CellInfo.m in Sources */,
 				8C630F751ED883BF002963A2 /* BaseAsyncOperation.m in Sources */,
 				8C630F7C1ED8855C002963A2 /* SignUpOp.m in Sources */,
 				8C630F791ED8854D002963A2 /* LoginOp.m in Sources */,
+				8E80AFF41ED8D9BF004ED08A /* BaseTableViewController.m in Sources */,
 				8C630F681ED877CC002963A2 /* BaseViewController.m in Sources */,
 				8C630F6F1ED87F0B002963A2 /* LoginViewController.m in Sources */,
 				8C630F6C1ED87803002963A2 /* MyProfileViewController.m in Sources */,
+				8E80AFF11ED8D87D004ED08A /* TeachersViewController.m in Sources */,
 				8C630F511ED86E43002963A2 /* AppDelegate.m in Sources */,
 				8C630F721ED87F23002963A2 /* SignUpViewController.m in Sources */,
 				8C630F861ED88E20002963A2 /* AuthorisationHandler.m in Sources */,
+				8E80AFED1ED8D740004ED08A /* TeacherCell.m in Sources */,
 				8C630F7F1ED88D20002963A2 /* BaseServerRequestOperation.m in Sources */,
 				8C630F4E1ED86E43002963A2 /* main.m in Sources */,
 			);

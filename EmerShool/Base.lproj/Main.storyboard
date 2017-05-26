@@ -48,7 +48,7 @@
         <!--Мои учителя-->
         <scene sceneID="ABn-xz-3cx">
             <objects>
-                <viewController title="Мои учителя" id="eT0-W9-bJM" sceneMemberID="viewController">
+                <viewController title="Мои учителя" id="eT0-W9-bJM" customClass="TeachersViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mc4-iv-LZ1"/>
                         <viewControllerLayoutGuide type="bottom" id="cOj-gN-DT5"/>
@@ -56,9 +56,24 @@
                     <view key="view" contentMode="scaleToFill" id="RdZ-s9-5uG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vbh-f5-ohO">
+                                <rect key="frame" x="0.0" y="20" width="414" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vbh-f5-ohO" secondAttribute="trailing" id="52r-NM-egW"/>
+                            <constraint firstItem="cOj-gN-DT5" firstAttribute="top" secondItem="Vbh-f5-ohO" secondAttribute="bottom" id="BaH-Zi-5Mm"/>
+                            <constraint firstItem="Vbh-f5-ohO" firstAttribute="leading" secondItem="RdZ-s9-5uG" secondAttribute="leading" id="bkQ-sk-Sax"/>
+                            <constraint firstItem="Vbh-f5-ohO" firstAttribute="top" secondItem="mc4-iv-LZ1" secondAttribute="bottom" id="i7u-eB-6dW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Учителя" image="couple.png" id="YJj-Oa-pTB"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vbh-f5-ohO" id="bSd-ll-ooP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tq8-vb-Tgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,7 +90,19 @@
                     <view key="view" contentMode="scaleToFill" id="Fu9-Td-qgX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IFj-s9-ESY">
+                                <rect key="frame" x="0.0" y="20" width="414" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IFj-s9-ESY" secondAttribute="trailing" id="4lg-fC-s9b"/>
+                            <constraint firstItem="IFj-s9-ESY" firstAttribute="leading" secondItem="Fu9-Td-qgX" secondAttribute="leading" id="OQ1-id-HSH"/>
+                            <constraint firstItem="VwK-c5-0nV" firstAttribute="top" secondItem="IFj-s9-ESY" secondAttribute="bottom" id="gww-8z-gHC"/>
+                            <constraint firstItem="IFj-s9-ESY" firstAttribute="top" secondItem="LbU-bE-ciU" secondAttribute="bottom" id="ykP-dz-pkY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ученики" image="family.png" id="2Dq-LV-rrS"/>
                 </viewController>
