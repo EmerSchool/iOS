@@ -1,26 +1,110 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rh9-6c-YgG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Мой профиль-->
+        <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="Мой профиль" id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Я" id="e6o-Je-i5Z"/>
+                    <connections>
+                        <segue destination="ZDM-ht-b7h" kind="presentation" identifier="PresentLoginScreen" id="WSq-KS-9Hm"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-743" y="-521"/>
+        </scene>
+        <!--Мои учителя-->
+        <scene sceneID="ABn-xz-3cx">
+            <objects>
+                <viewController title="Мои учителя" id="eT0-W9-bJM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mc4-iv-LZ1"/>
+                        <viewControllerLayoutGuide type="bottom" id="cOj-gN-DT5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RdZ-s9-5uG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Учителя" id="YJj-Oa-pTB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tq8-vb-Tgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="-521"/>
+        </scene>
+        <!--Мои Ученики-->
+        <scene sceneID="rHq-az-rTv">
+            <objects>
+                <viewController title="Мои Ученики" id="jpA-lw-yYK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LbU-bE-ciU"/>
+                        <viewControllerLayoutGuide type="bottom" id="VwK-c5-0nV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fu9-Td-qgX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ученики" id="2Dq-LV-rrS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyT-PG-SVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="-521"/>
+        </scene>
+        <!--Таб-контроллер-->
+        <scene sceneID="Zuf-re-dt5">
+            <objects>
+                <tabBarController title="Таб-контроллер" id="Rh9-6c-YgG" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aDQ-ax-6Vp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="01J-lp-oVM" kind="relationship" relationship="viewControllers" id="Hez-uj-ONH"/>
+                        <segue destination="eT0-W9-bJM" kind="relationship" relationship="viewControllers" id="AMG-oF-JJm"/>
+                        <segue destination="jpA-lw-yYK" kind="relationship" relationship="viewControllers" id="hYS-4r-mhX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3s-u6-CTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="303"/>
+        </scene>
+        <!--Вход-->
+        <scene sceneID="fRE-Gm-TlL">
+            <objects>
+                <viewController title="Вход" id="ZDM-ht-b7h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5U3-23-CeR"/>
+                        <viewControllerLayoutGuide type="bottom" id="YVW-TH-Zmc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9b6-hG-wzf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="be4-kx-wXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="303"/>
         </scene>
     </scenes>
 </document>
