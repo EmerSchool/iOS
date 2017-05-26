@@ -1,13 +1,13 @@
 //
-//  CellInfo.m
+//  CellMetaData.m
 //  EmerShool
 //
 //  Created by Gbir on 27.05.17.
 //  Copyright © 2017 EmerShool. All rights reserved.
 //
 
-#import "CellInfo.h"
+#import "CellMetaData.h"
 
-@implementation CellInfo
+@implementation CellMetaData
 
 @end

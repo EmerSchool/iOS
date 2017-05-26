@@ -7,7 +7,7 @@
 //
 
 #import "BaseTableViewController.h"
-#import "CellInfo.h"
+#import "CellMetaData.h"
 
 @interface BaseTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -40,8 +40,25 @@
 }
  
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    NSArray *rows = self.sections[indexPath.section];
+    CellMetaData *cellData = rows[indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellData.reusIdCell];
+    
+    if (!cell)
+        cell = [self prepareCellForReusableId:cellData.reusIdCell];
+    
+    [self processPreparedCell:cell forIndexPath:indexPath];
+    
     return cell;
+}
+
+- (UITableViewCell *)prepareCellForReusableId:(NSString *)reusableId {
+    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reusableId];
+}
+
+- (void)processPreparedCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+    ;
 }
 
 @end

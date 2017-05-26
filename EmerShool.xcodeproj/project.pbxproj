@@ -30,7 +30,7 @@
 		8E80AFEE1ED8D740004ED08A /* TeacherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E80AFEC1ED8D740004ED08A /* TeacherCell.xib */; };
 		8E80AFF11ED8D87D004ED08A /* TeachersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80AFF01ED8D87D004ED08A /* TeachersViewController.m */; };
 		8E80AFF41ED8D9BF004ED08A /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80AFF31ED8D9BF004ED08A /* BaseTableViewController.m */; };
-		8E80AFF71ED8DDF5004ED08A /* CellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80AFF61ED8DDF5004ED08A /* CellInfo.m */; };
+		8E80AFF71ED8DDF5004ED08A /* CellMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E80AFF61ED8DDF5004ED08A /* CellMetaData.m */; };
 		E2528E8FABF32F7927FF59B5 /* libPods-EmerShool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D172CAFB2743B7683AD6ED /* libPods-EmerShool.a */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +75,8 @@
 		8E80AFF01ED8D87D004ED08A /* TeachersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachersViewController.m; sourceTree = "<group>"; };
 		8E80AFF21ED8D9BF004ED08A /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		8E80AFF31ED8D9BF004ED08A /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
-		8E80AFF51ED8DDF5004ED08A /* CellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellInfo.h; sourceTree = "<group>"; };
-		8E80AFF61ED8DDF5004ED08A /* CellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellInfo.m; sourceTree = "<group>"; };
+		8E80AFF51ED8DDF5004ED08A /* CellMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellMetaData.h; sourceTree = "<group>"; };
+		8E80AFF61ED8DDF5004ED08A /* CellMetaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellMetaData.m; sourceTree = "<group>"; };
 		B13E0280A32B56257942B9D1 /* Pods-EmerShool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmerShool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmerShool/Pods-EmerShool.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,8 +223,8 @@
 				8E80AFEA1ED8D740004ED08A /* TeacherCell.h */,
 				8E80AFEB1ED8D740004ED08A /* TeacherCell.m */,
 				8E80AFEC1ED8D740004ED08A /* TeacherCell.xib */,
-				8E80AFF51ED8DDF5004ED08A /* CellInfo.h */,
-				8E80AFF61ED8DDF5004ED08A /* CellInfo.m */,
+				8E80AFF51ED8DDF5004ED08A /* CellMetaData.h */,
+				8E80AFF61ED8DDF5004ED08A /* CellMetaData.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -358,7 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C630F5A1ED86E43002963A2 /* EmerShool.xcdatamodeld in Sources */,
-				8E80AFF71ED8DDF5004ED08A /* CellInfo.m in Sources */,
+				8E80AFF71ED8DDF5004ED08A /* CellMetaData.m in Sources */,
 				8C630F751ED883BF002963A2 /* BaseAsyncOperation.m in Sources */,
 				8C630F7C1ED8855C002963A2 /* SignUpOp.m in Sources */,
 				8C630F791ED8854D002963A2 /* LoginOp.m in Sources */,

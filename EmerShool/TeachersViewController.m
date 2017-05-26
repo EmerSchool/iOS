@@ -9,6 +9,8 @@
 #import "TeachersViewController.h"
 #import "TeacherCell.h"
 
+NSString *const kTeacherCellReuseId = @"teacherCellReuseId";
+
 @interface TeachersViewController () 
 
 
@@ -18,8 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self registerCellWithClass:[TeacherCell class] reusId:@"cell"];
-    [self.sections addObject:@[@1]];
+    [self registerCellWithClass:[TeacherCell class] reusId:kTeacherCellReuseId];
+    
+    CellMetaData *cellData = [CellMetaData new];
+    cellData.titleCell = @"test";
+    cellData.reusIdCell = kTeacherCellReuseId;
+    [self.sections addObject:@[cellData]];
 }
 
+- (void)processPreparedCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath  {
+    NSArray *row = self.sections[indexPath.section];
+    CellMetaData *cellData = row[indexPath.row];
+    cell.textLabel.text = cellData.titleCell;
+}
 @end

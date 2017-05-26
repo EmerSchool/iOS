@@ -1,5 +1,5 @@
 //
-//  CellInfo.h
+//  CellMetaData.h
 //  EmerShool
 //
 //  Created by Gbir on 27.05.17.
@@ -13,7 +13,7 @@ typedef enum : NSUInteger {
     typeCellPupil,
 } typeCellEnum;
 
-@interface CellInfo : NSObject
+@interface CellMetaData : NSObject
 
 @property (nonatomic) typeCellEnum typeCell;
 @property (strong, nonatomic) NSString *reusIdCell;

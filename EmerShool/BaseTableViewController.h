@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "CellMetaData.h"
 
 @interface BaseTableViewController : BaseViewController
 
@@ -15,5 +16,5 @@
 
 - (void)registerCellWithClass:(Class) classCell reusId:(NSString *)reusId;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-
+- (void)processPreparedCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath ;
 @end
