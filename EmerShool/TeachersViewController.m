@@ -95,6 +95,8 @@ CGFloat const kAddTeacherToolbarOffset = 44.0f;
     self.addTeacherToolbarTopConstraint.constant = self.addTeacherToolbarTopConstraint.constant > 0 ? 0 : kAddTeacherToolbarOffset;
     [self.view setNeedsLayout];
     
+    [self.view endEditing:YES];
+    
 //    [UIView animateWithDuration:2 animations:^{
 //        [self.view setNeedsLayout];
 //    }];
