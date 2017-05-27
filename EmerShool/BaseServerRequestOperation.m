@@ -13,9 +13,7 @@ NSTimeInterval const kDefaultRequestTimeout = 10;//10 секунд
 NSString * const httpHeaderContentType = @"application/x-www-form-urlencoded";
 NSString * const httpMethod = @"POST";
 
-@interface BaseServerRequestOperation () {
-    NSError * _error;
-}
+@interface BaseServerRequestOperation ()
 
 @property (nonatomic, readonly) NSURL *baseURL;
 @property (nonatomic, copy) NSString *serverMethodName;
@@ -23,15 +21,11 @@ NSString * const httpMethod = @"POST";
 @property (nonatomic, copy) NSDictionary *params;
 @property (nonatomic, strong) NSDictionary *result;
 
-@property (nonatomic, copy) NSError *serverError;
+@property (copy) ServerRequestCompletionHandler serverCompletion;
 
 @end
 
 @implementation BaseServerRequestOperation
-
-- (NSError *)error {
-    return _serverError;
-}
 
 - (NSURL *)baseURL {
     NSURL *retval = [[NSUserDefaults standardUserDefaults] URLForKey:kBaseURLKey];
@@ -44,12 +38,20 @@ NSString * const httpMethod = @"POST";
     return retval;
 }
 
-- (instancetype)initWithCompletion:(OpCompletionHandler)completion serverMethodName:(NSString *)serverMethodName params:(NSDictionary *)params {
-    if (self = [super initWithCompletion:completion]) {
+- (instancetype)initWithCompletion:(ServerRequestCompletionHandler)completion serverMethodName:(NSString *)serverMethodName params:(NSDictionary *)params {
+    if (self = [super initWithCompletion:nil]) {
+        self.serverCompletion = completion;
         self.serverMethodName = serverMethodName;
         self.params = params;
     }
     return self;
+}
+
+- (void)finish {
+    if (self.serverCompletion)
+        self.serverCompletion(self.resultError, self.result);
+    
+    [super finish];
 }
 
 - (NSURLRequest *)prepareRequest {
@@ -59,13 +61,15 @@ NSString * const httpMethod = @"POST";
     
     [request setHTTPMethod:httpMethod];
     [request setValue:httpHeaderContentType forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
     NSError *error = nil;
-    NSData *postdata = [NSJSONSerialization dataWithJSONObject:self.params options:0 error:&error];
+    NSString *serializedParams = [self serializeParams:self.params];
+    NSData *postdata = [serializedParams dataUsingEncoding:NSUTF8StringEncoding];//[NSJSONSerialization dataWithJSONObject:self.params options:NSJSONWritingPrettyPrinted error:&error];//[NSJSONSerialization dataWithJSONObject:self.params options:0 error:&error];
     if (!error)
         [request setHTTPBody:postdata];
     else {
-        self.serverError = error;
+        self.error = error;
         [self finish];
     }
     return request;
@@ -80,7 +84,7 @@ NSString * const httpMethod = @"POST";
     NSURLRequest *request = [self prepareRequest];
     
     if (!request) {
-        this.serverError = [NSError errorWithDomain:@"no request data" code:ErrorCodeNoServerRequest userInfo:nil];
+        this.error = [NSError errorWithDomain:@"no request data" code:ErrorCodeNoServerRequest userInfo:nil];
         [self finish];
     }
     
@@ -92,12 +96,12 @@ NSString * const httpMethod = @"POST";
             return [this finish];
         
         if (error) {
-            this.serverError = error;
+            this.error = error;
             return [this finish];
         }
         
         if (!response) {
-            this.serverError = [NSError errorWithDomain:@"no response data" code:ErrorCodeNoServerResponce userInfo:nil];
+            this.error = [NSError errorWithDomain:@"no response data" code:ErrorCodeNoServerResponce userInfo:nil];
             return [this finish];
         }
         
@@ -105,7 +109,7 @@ NSString * const httpMethod = @"POST";
         NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithDictionary:[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&parseError]];
         
         if (parseError) {
-            this.serverError = parseError;
+            this.error = parseError;
             return [this finish];
         }
         
@@ -115,6 +119,30 @@ NSString * const httpMethod = @"POST";
         
     }];
     [sessionTask resume];
+}
+- (NSString *)serializeParams:(NSDictionary *)params {
+    NSMutableArray *pairs = NSMutableArray.array;
+    for (NSString *key in params.keyEnumerator) {
+        id value = params[key];
+        if ([value isKindOfClass:[NSDictionary class]])
+            for (NSString *subKey in value)
+                [pairs addObject:[NSString stringWithFormat:@"%@[%@]=%@", key, subKey, [self escapeValueForURLParameter:[value objectForKey:subKey]]]];
+        
+        else if ([value isKindOfClass:[NSArray class]])
+            for (NSString *subValue in value)
+                [pairs addObject:[NSString stringWithFormat:@"%@[]=%@", key, [self escapeValueForURLParameter:subValue]]];
+        
+        else
+            [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [self escapeValueForURLParameter:value]]];
+        
+    }
+    return [pairs componentsJoinedByString:@"&"];
+}
+
+- (NSString *)escapeValueForURLParameter:(NSString *)valueToEscape {
+    return [valueToEscape stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithCharactersInString:@"!*'();:@&=+$,/?%#[]"]];
+//    return (__bridge_transfer NSString *) CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef) valueToEscape,
+//                                                                                  NULL, (CFStringRef) @"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
 }
 
 @end

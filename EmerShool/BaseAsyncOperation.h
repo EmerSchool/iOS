@@ -21,7 +21,10 @@ extern NSString * const kInnerErrorKey;
 
 @interface BaseAsyncOperation : NSOperation
 
-@property (nonatomic, copy, readonly) NSError *error;
+@property (nonatomic, copy) NSError *error;
+
+@property (nonatomic, readonly) NSError *resultError;//с учетом возможной отмены операции
+
 @property (nonatomic, readonly) id completionInfo;
 
 @property (nonatomic, readonly) NSOperationQueue *initialQueue;

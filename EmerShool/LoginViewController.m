@@ -33,11 +33,16 @@
             if (!error && [this.authHandler isAuthorized]) {
                 [this dismiss];
             } else {
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Ошибка авторизации" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
-                [self.navigationController showViewController:alert sender:self];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Ошибка авторизации"
+                                                                               message:error.localizedDescription
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    ;
+                }]];
+                [self presentViewController:alert animated:YES completion:NULL];
             }
         });
-    }];
+    } login:self.loginField.text password:self.passwordFiled.text];
     [self.defaultQueue addOperation:loginOp];
 }
 

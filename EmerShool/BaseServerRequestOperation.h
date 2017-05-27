@@ -8,6 +8,10 @@
 
 #import "BaseAsyncOperation.h"
 
+typedef void (^ServerRequestCompletionHandler)(NSError *error, NSDictionary *result);
+
 @interface BaseServerRequestOperation : BaseAsyncOperation
+
+- (instancetype)initWithCompletion:(ServerRequestCompletionHandler)completion serverMethodName:(NSString *)serverMethodName params:(NSDictionary *)params;
 
 @end

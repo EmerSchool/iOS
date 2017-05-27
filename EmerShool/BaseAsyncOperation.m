@@ -58,14 +58,18 @@ NSString * const kInnerErrorKey = @"InnerErrorKey";
     
     [self main];
 }
+- (NSError *)resultError {
+    return
+    self.isCancelled ? [NSError errorWithDomain:@"async_operation_error"
+                                           code:ErrorCodeOpCanceled
+                                       userInfo:@{kInnerErrorKey:self.error,
+                                                  NSLocalizedDescriptionKey:[NSString stringWithFormat:@"Действие отменено: %@", self.name]
+                                                  }] : self.error;
+}
 
 - (void)finish {
     if (self.completion)
-        self.completion(self.isCancelled ? [NSError errorWithDomain:@"async_operation_error"
-                                                               code:ErrorCodeOpCanceled
-                                                           userInfo:@{kInnerErrorKey:_error,
-                                                                      NSLocalizedDescriptionKey:[NSString stringWithFormat:@"Действие отменено: %@", self.name]
-                                                                      }] : _error, _completionInfo);
+        self.completion(self.resultError, _completionInfo);
     
     [self willChangeValueForKey:@"isExecuting"];
     _executing = NO;
