@@ -17,6 +17,7 @@
 		8C023B651ED97A2F00AB96BF /* TeachersListOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B641ED97A2F00AB96BF /* TeachersListOp.m */; };
 		8C023B681ED990ED00AB96BF /* Delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C023B661ED990ED00AB96BF /* Delete@3x.png */; };
 		8C023B691ED990ED00AB96BF /* Mark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C023B671ED990ED00AB96BF /* Mark@3x.png */; };
+		8C023B6C1ED992CB00AB96BF /* PupilTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B6B1ED992CB00AB96BF /* PupilTableViewController.m */; };
 		8C630F4E1ED86E43002963A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F4D1ED86E42002963A2 /* main.m */; };
 		8C630F511ED86E43002963A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F501ED86E43002963A2 /* AppDelegate.m */; };
 		8C630F571ED86E43002963A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F551ED86E43002963A2 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,8 @@
 		8C023B641ED97A2F00AB96BF /* TeachersListOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachersListOp.m; sourceTree = "<group>"; };
 		8C023B661ED990ED00AB96BF /* Delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete@3x.png"; sourceTree = "<group>"; };
 		8C023B671ED990ED00AB96BF /* Mark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mark@3x.png"; sourceTree = "<group>"; };
+		8C023B6A1ED992CB00AB96BF /* PupilTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PupilTableViewController.h; sourceTree = "<group>"; };
+		8C023B6B1ED992CB00AB96BF /* PupilTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PupilTableViewController.m; sourceTree = "<group>"; };
 		8C630F491ED86E42002963A2 /* EmerShool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmerShool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C630F4D1ED86E42002963A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C630F4F1ED86E43002963A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				8E80AFF01ED8D87D004ED08A /* TeachersViewController.m */,
 				8E80AFF21ED8D9BF004ED08A /* BaseTableViewController.h */,
 				8E80AFF31ED8D9BF004ED08A /* BaseTableViewController.m */,
+				8C023B6A1ED992CB00AB96BF /* PupilTableViewController.h */,
+				8C023B6B1ED992CB00AB96BF /* PupilTableViewController.m */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				8C630F7C1ED8855C002963A2 /* SignUpOp.m in Sources */,
 				8C630F791ED8854D002963A2 /* LoginOp.m in Sources */,
 				8E80AFF41ED8D9BF004ED08A /* BaseTableViewController.m in Sources */,
+				8C023B6C1ED992CB00AB96BF /* PupilTableViewController.m in Sources */,
 				8C630F681ED877CC002963A2 /* BaseViewController.m in Sources */,
 				8C023B621ED9764300AB96BF /* TeachersListRequestOp.m in Sources */,
 				8C023B651ED97A2F00AB96BF /* TeachersListOp.m in Sources */,
