@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C023B4C1ED8EFC800AB96BF /* LoginRequestOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B4B1ED8EFC800AB96BF /* LoginRequestOp.m */; };
 		8C023B4F1ED9006600AB96BF /* BaseServerRequestOperation+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B4E1ED9006600AB96BF /* BaseServerRequestOperation+Utils.m */; };
+		8C023B521ED94D1300AB96BF /* SignUpRequestOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B511ED94D1300AB96BF /* SignUpRequestOp.m */; };
 		8C630F4E1ED86E43002963A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F4D1ED86E42002963A2 /* main.m */; };
 		8C630F511ED86E43002963A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F501ED86E43002963A2 /* AppDelegate.m */; };
 		8C630F571ED86E43002963A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F551ED86E43002963A2 /* LaunchScreen.storyboard */; };
@@ -43,6 +44,8 @@
 		8C023B4B1ED8EFC800AB96BF /* LoginRequestOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequestOp.m; sourceTree = "<group>"; };
 		8C023B4D1ED9006600AB96BF /* BaseServerRequestOperation+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseServerRequestOperation+Utils.h"; sourceTree = "<group>"; };
 		8C023B4E1ED9006600AB96BF /* BaseServerRequestOperation+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseServerRequestOperation+Utils.m"; sourceTree = "<group>"; };
+		8C023B501ED94D1300AB96BF /* SignUpRequestOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpRequestOp.h; sourceTree = "<group>"; };
+		8C023B511ED94D1300AB96BF /* SignUpRequestOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpRequestOp.m; sourceTree = "<group>"; };
 		8C630F491ED86E42002963A2 /* EmerShool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmerShool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C630F4D1ED86E42002963A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C630F4F1ED86E43002963A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				8C023B4E1ED9006600AB96BF /* BaseServerRequestOperation+Utils.m */,
 				8C023B4A1ED8EFC800AB96BF /* LoginRequestOp.h */,
 				8C023B4B1ED8EFC800AB96BF /* LoginRequestOp.m */,
+				8C023B501ED94D1300AB96BF /* SignUpRequestOp.h */,
+				8C023B511ED94D1300AB96BF /* SignUpRequestOp.m */,
 			);
 			name = ServerOps;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				8E80AFF41ED8D9BF004ED08A /* BaseTableViewController.m in Sources */,
 				8C630F681ED877CC002963A2 /* BaseViewController.m in Sources */,
 				8C630F6F1ED87F0B002963A2 /* LoginViewController.m in Sources */,
+				8C023B521ED94D1300AB96BF /* SignUpRequestOp.m in Sources */,
 				8C630F6C1ED87803002963A2 /* MyProfileViewController.m in Sources */,
 				8E80AFF11ED8D87D004ED08A /* TeachersViewController.m in Sources */,
 				8C630F511ED86E43002963A2 /* AppDelegate.m in Sources */,

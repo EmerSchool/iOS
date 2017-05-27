@@ -10,6 +10,8 @@
 
 @interface LoginOp : BaseAsyncOperation
 
-- (instancetype)initWithCompletion:(OpCompletionHandler)completion login:(NSString *)login password:(NSString *)password;
+- (instancetype)initWithCompletion:(OpCompletionHandler)completion
+                             login:(NSString *)login
+                          password:(NSString *)password;
 
 @end

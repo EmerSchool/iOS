@@ -23,6 +23,7 @@
 - (NSString *)name {
     return @"Авторизация пользователя";
 }
+
 - (instancetype)initWithCompletion:(OpCompletionHandler)completion login:(NSString *)login password:(NSString *)password {
     if (self = [super initWithCompletion:completion]) {
         self.login = login;

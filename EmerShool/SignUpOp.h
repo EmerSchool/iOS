@@ -10,4 +10,10 @@
 
 @interface SignUpOp : BaseAsyncOperation
 
+- (instancetype)initWithCompletion:(OpCompletionHandler)completion
+                             login:(NSString *)login
+                          password:(NSString *)password
+                               fio:(NSString *)fio
+                           details:(NSString *)details;
+
 @end

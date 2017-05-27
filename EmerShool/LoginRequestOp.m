@@ -13,8 +13,10 @@
 - (instancetype _Nonnull )initWithCompletion:(nonnull LoginRequestCompletionHandler)completion login:(NSString *_Nonnull)login password:(NSString *_Nonnull)password {
     if (self = [super initWithCompletion:^(NSError *error, NSDictionary *result) { completion(error, result[@"token"]); }
                         serverMethodName:@"login"
-                                  params:@{@"user":login,
-                                           @"password":password}]) {
+                                  params:@{
+                                           @"login":login,
+                                           @"password":password
+                                           }]) {
         ;
     }
     return self;

@@ -47,8 +47,10 @@
 }
 
 - (void)dismiss {
-    [self.presentingViewController dismissViewControllerAnimated:self completion:^{
-        ;
-    }];
+    [self.presentingViewController dismissViewControllerAnimated:self.presentingViewController.presentedViewController
+                                                      completion:^{
+                                                          ;
+                                                      }];
 }
+
 @end
