@@ -10,4 +10,10 @@
 
 @interface TeachersViewController : BaseTableViewController
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *addTeacherToolbarTopConstraint;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addTeacherMenuToggler;
+
+- (IBAction)addTeacherTogglerButtonPressed:(id)sender;
+
 @end

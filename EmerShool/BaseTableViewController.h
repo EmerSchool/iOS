@@ -9,6 +9,8 @@
 #import "BaseViewController.h"
 #import "CellMetaData.h"
 
+typedef void (^ReloadCompletionHandler)(NSError *error, id completionInfo);
+
 @interface BaseTableViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -17,4 +19,13 @@
 - (void)registerCellWithClass:(Class) classCell reusId:(NSString *)reusId;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)processPreparedCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath ;
+
+//! Загрузка и обновление таблицы
+- (void)reloadData;
+//! Загрузка данных
+- (void)loadData;
+
+//! Для асинхронной загрузки данных
+- (void)reloadDataWithCompletion:(ReloadCompletionHandler)completion;
+
 @end

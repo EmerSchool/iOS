@@ -9,6 +9,8 @@
 #import "BaseTableViewController.h"
 #import "CellMetaData.h"
 
+#import "BaseAsyncOperation.h"
+
 @interface BaseTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @end
@@ -17,9 +19,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.sections = [NSMutableArray new];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.estimatedRowHeight = 60.0f;
+    
+    UIRefreshControl *refreshControl = [UIRefreshControl new];
+    
+    [refreshControl addTarget:self action:@selector(onRefreshControlPull:) forControlEvents:UIControlEventValueChanged];
+    
+    self.tableView.refreshControl = refreshControl;
+    
+    [self reloadData];
+}
+
+- (void)onRefreshControlPull:(UIRefreshControl *)refreshControl {
+    __weak BaseTableViewController *this = self;
+    [self reloadDataWithCompletion:^(NSError *error, id completionInfo) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (refreshControl)
+                [refreshControl endRefreshing];
+            
+            if (this)
+                [this reloadData];
+        });
+    }];
+}
+
+- (void)reloadDataWithCompletion:(ReloadCompletionHandler)completion {
+    completion(nil, nil);
+}
+
+- (void)reloadData {
+    [self loadData];
+    [self.tableView reloadData];
+
+}
+
+- (void)loadData {
+    self.sections = [NSMutableArray new];
 }
 
 - (void)registerCellWithClass:(Class) classCell reusId:(NSString *)reusId {
@@ -51,6 +88,10 @@
     [self processPreparedCell:cell forIndexPath:indexPath];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
 
 - (UITableViewCell *)prepareCellForReusableId:(NSString *)reusableId {
