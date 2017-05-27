@@ -104,6 +104,7 @@ NSString * const httpMethod = @"POST";
             this.error = [NSError errorWithDomain:@"no response data" code:ErrorCodeNoServerResponce userInfo:nil];
             return [this finish];
         }
+        [BaseServerRequestOperation spoolData:data fileNameMask:@"%@/%f_server_data_for_%@" method:this.serverMethodName];
         
         NSError *parseError = nil;
         NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithDictionary:[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&parseError]];

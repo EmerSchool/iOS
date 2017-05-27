@@ -15,3 +15,5 @@ typedef void (^ServerRequestCompletionHandler)(NSError *error, NSDictionary *res
 - (instancetype)initWithCompletion:(ServerRequestCompletionHandler)completion serverMethodName:(NSString *)serverMethodName params:(NSDictionary *)params;
 
 @end
+
+#import "BaseServerRequestOperation+Utils.h"
