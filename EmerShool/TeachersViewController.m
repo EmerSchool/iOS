@@ -31,6 +31,6 @@ NSString *const kTeacherCellReuseId = @"teacherCellReuseId";
 - (void)processPreparedCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath  {
     NSArray *row = self.sections[indexPath.section];
     CellMetaData *cellData = row[indexPath.row];
-    cell.textLabel.text = cellData.titleCell;
+    ((TeacherCell *)cell).cellTitleLabel.text = cellData.titleCell;
 }
 @end
