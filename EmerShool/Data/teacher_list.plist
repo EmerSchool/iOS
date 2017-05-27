@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>isAccepted</key>
+		<true/>
+		<key>subject</key>
+		<string>Философия</string>
+		<key>score</key>
+		<string>1580</string>
+		<key>rate</key>
+		<string>87</string>
+		<key>fio</key>
+		<string>Магистр Йода</string>
+		<key>login</key>
+		<string>YodaTheMaster</string>
+	</dict>
+	<dict>
+		<key>isAccepted</key>
+		<true/>
+		<key>subject</key>
+		<string>Естествознание</string>
+		<key>score</key>
+		<string>706</string>
+		<key>rate</key>
+		<string>50</string>
+		<key>fio</key>
+		<string>Оби Ван Кеноби</string>
+		<key>login</key>
+		<string>ObiOne</string>
+	</dict>
+	<dict>
+		<key>isAccepted</key>
+		<false/>
+		<key>subject</key>
+		<string>Темная сторона</string>
+		<key>score</key>
+		<string>1450</string>
+		<key>rate</key>
+		<string>39</string>
+		<key>fio</key>
+		<string>Владыка Ситх</string>
+		<key>login</key>
+		<string>BadGuy</string>
+	</dict>
+</array>
+</plist>

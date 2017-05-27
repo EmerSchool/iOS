@@ -8,6 +8,8 @@
 
 #import "TeachersViewController.h"
 #import "TeacherCell.h"
+#import "TeachersListOp.h"
+#import "AuthorisationHandler.h"
 
 NSString * const kTeacherCellReuseId = @"teacherCellReuseId";
 CGFloat const kAddTeacherToolbarOffset = 44.0f;
@@ -15,27 +17,70 @@ CGFloat const kAddTeacherToolbarOffset = 44.0f;
 @interface TeachersViewController () {
 }
 
+@property (strong, nonatomic) NSMutableArray <NSDictionary *> * serverData;
 
 @end
 
 @implementation TeachersViewController
+
 #pragma mark - dataload
 - (void)reloadDataWithCompletion:(ReloadCompletionHandler)completion {
-    completion(nil, nil);    
+    [self loadServerDataCompletion:^(NSError * _Nullable error, NSArray<NSDictionary *> * _Nullable teachersList) {
+        completion(nil, nil);
+    }];
+//    __weak TeachersViewController *this = self;
+//    TeachersListOp *teachersListOp = [[TeachersListOp alloc] initWithCompletion:^(NSError * _Nullable error, NSArray<NSDictionary *> * _Nullable teachersList) {
+//        if (teachersList && teachersList.count)
+//            [this.serverData addObjectsFromArray:teachersList];
+//        else
+//            [this.serverData removeAllObjects];
+//        
+//        completion(nil, nil);
+//        
+//    } token:self.authHandler.token];
+//    [self.defaultQueue addOperation:teachersListOp];
+}
+
+
+- (void)loadServerDataCompletion:(TeachersListCompletionHandler)completion {
+    __weak TeachersViewController *this = self;
+    TeachersListOp *teachersListOp = [[TeachersListOp alloc] initWithCompletion:^(NSError * _Nullable error, NSArray<NSDictionary *> * _Nullable teachersList) {
+        if (teachersList && teachersList.count)
+            this.serverData = [[NSMutableArray alloc]initWithArray:teachersList];
+        else
+            [this.serverData removeAllObjects];
+        if (completion)
+            completion(error,teachersList);
+        
+    } token:self.authHandler.token];
+    [self.defaultQueue addOperation:teachersListOp];
 }
 
 - (void)loadData {
     [super loadData];
-    CellMetaData *cellData = [CellMetaData new];
-    cellData.titleCell = @"test";
-    cellData.reusIdCell = kTeacherCellReuseId;
-    [self.sections addObject:@[cellData]];
+    NSMutableArray *listItems = [[NSMutableArray alloc] initWithCapacity:self.serverData.count];
+    
+    for (NSDictionary *item in self.serverData) {
+        
+        CellMetaData *cellData = [CellMetaData new];
+        cellData.titleCell = item[@"fio"];
+        cellData.subTitleCell = item[@"subject"];
+        cellData.reusIdCell = kTeacherCellReuseId;
+        cellData.bollValue = [item[@"isAccepted"] boolValue];
+        [listItems addObject:cellData];
+    }
+    
+    [self.sections addObject:listItems];
 }
 #pragma mark -
 
 - (void)viewDidLoad {
+    self.serverData = [NSMutableArray array];
     [super viewDidLoad];
     [self registerCellWithClass:[TeacherCell class] reusId:kTeacherCellReuseId];
+    [self loadServerDataCompletion:^(NSError * _Nullable error, NSArray<NSDictionary *> * _Nullable teachersList) {
+        [self reloadData];
+    }];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -48,6 +93,9 @@ CGFloat const kAddTeacherToolbarOffset = 44.0f;
     NSArray *row = self.sections[indexPath.section];
     CellMetaData *cellData = row[indexPath.row];
     ((TeacherCell *)cell).cellTitleLabel.text = cellData.titleCell;
+    ((TeacherCell *)cell).cellSubtitleLabel.text = cellData.subTitleCell;
+    UIImage *image =  [UIImage imageNamed:cellData.bollValue ? @"connect" : @"cancel"];
+    ((TeacherCell *)cell).leftIconImageView.image = image;
 }
 
 - (IBAction)addTeacherTogglerButtonPressed:(id)sender {
