@@ -10,6 +10,8 @@
 		8C023B4C1ED8EFC800AB96BF /* LoginRequestOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B4B1ED8EFC800AB96BF /* LoginRequestOp.m */; };
 		8C023B4F1ED9006600AB96BF /* BaseServerRequestOperation+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B4E1ED9006600AB96BF /* BaseServerRequestOperation+Utils.m */; };
 		8C023B521ED94D1300AB96BF /* SignUpRequestOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B511ED94D1300AB96BF /* SignUpRequestOp.m */; };
+		8C023B5B1ED95E0E00AB96BF /* PupilCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B591ED95E0E00AB96BF /* PupilCell.m */; };
+		8C023B5C1ED95E0E00AB96BF /* PupilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C023B5A1ED95E0E00AB96BF /* PupilCell.xib */; };
 		8C630F4E1ED86E43002963A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F4D1ED86E42002963A2 /* main.m */; };
 		8C630F511ED86E43002963A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F501ED86E43002963A2 /* AppDelegate.m */; };
 		8C630F571ED86E43002963A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F551ED86E43002963A2 /* LaunchScreen.storyboard */; };
@@ -46,6 +48,9 @@
 		8C023B4E1ED9006600AB96BF /* BaseServerRequestOperation+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseServerRequestOperation+Utils.m"; sourceTree = "<group>"; };
 		8C023B501ED94D1300AB96BF /* SignUpRequestOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpRequestOp.h; sourceTree = "<group>"; };
 		8C023B511ED94D1300AB96BF /* SignUpRequestOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpRequestOp.m; sourceTree = "<group>"; };
+		8C023B581ED95E0E00AB96BF /* PupilCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PupilCell.h; sourceTree = "<group>"; };
+		8C023B591ED95E0E00AB96BF /* PupilCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PupilCell.m; sourceTree = "<group>"; };
+		8C023B5A1ED95E0E00AB96BF /* PupilCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PupilCell.xib; sourceTree = "<group>"; };
 		8C630F491ED86E42002963A2 /* EmerShool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmerShool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C630F4D1ED86E42002963A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C630F4F1ED86E43002963A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -240,6 +245,9 @@
 				8E80AFEC1ED8D740004ED08A /* TeacherCell.xib */,
 				8E80AFF51ED8DDF5004ED08A /* CellMetaData.h */,
 				8E80AFF61ED8DDF5004ED08A /* CellMetaData.m */,
+				8C023B581ED95E0E00AB96BF /* PupilCell.h */,
+				8C023B591ED95E0E00AB96BF /* PupilCell.m */,
+				8C023B5A1ED95E0E00AB96BF /* PupilCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 			files = (
 				8C630F901ED89A1C002963A2 /* family@3x.png in Resources */,
 				8C630F5F1ED86E43002963A2 /* Main.storyboard in Resources */,
+				8C023B5C1ED95E0E00AB96BF /* PupilCell.xib in Resources */,
 				8C630F8F1ED89A1C002963A2 /* couple@3x.png in Resources */,
 				8C630F8E1ED89A1C002963A2 /* baby-boy@3x.png in Resources */,
 				8E80AFEE1ED8D740004ED08A /* TeacherCell.xib in Resources */,
@@ -380,6 +389,7 @@
 				8C630F791ED8854D002963A2 /* LoginOp.m in Sources */,
 				8E80AFF41ED8D9BF004ED08A /* BaseTableViewController.m in Sources */,
 				8C630F681ED877CC002963A2 /* BaseViewController.m in Sources */,
+				8C023B5B1ED95E0E00AB96BF /* PupilCell.m in Sources */,
 				8C630F6F1ED87F0B002963A2 /* LoginViewController.m in Sources */,
 				8C023B521ED94D1300AB96BF /* SignUpRequestOp.m in Sources */,
 				8C630F6C1ED87803002963A2 /* MyProfileViewController.m in Sources */,

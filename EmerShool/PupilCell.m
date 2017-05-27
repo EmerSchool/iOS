@@ -1,14 +1,14 @@
 //
-//  TeacherCell.m
+//  PupilCell.m
 //  EmerShool
 //
-//  Created by Gbir on 27.05.17.
+//  Created by Konstantin Krupovich on 27/05/2017.
 //  Copyright © 2017 EmerShool. All rights reserved.
 //
 
-#import "TeacherCell.h"
+#import "PupilCell.h"
 
-@implementation TeacherCell
+@implementation PupilCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -19,12 +19,6 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-}
-
-- (IBAction)changeRatingBtnPressed:(id)sender {
-}
-
-- (IBAction)changeLinkStatusBtnPressed:(id)sender {
 }
 
 @end
