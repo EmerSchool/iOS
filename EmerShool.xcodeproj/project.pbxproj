@@ -15,6 +15,8 @@
 		8C023B5F1ED972FC00AB96BF /* teacher_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C023B5E1ED972FC00AB96BF /* teacher_list.plist */; };
 		8C023B621ED9764300AB96BF /* TeachersListRequestOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B611ED9764300AB96BF /* TeachersListRequestOp.m */; };
 		8C023B651ED97A2F00AB96BF /* TeachersListOp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B641ED97A2F00AB96BF /* TeachersListOp.m */; };
+		8C023B681ED990ED00AB96BF /* Delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C023B661ED990ED00AB96BF /* Delete@3x.png */; };
+		8C023B691ED990ED00AB96BF /* Mark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C023B671ED990ED00AB96BF /* Mark@3x.png */; };
 		8C630F4E1ED86E43002963A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F4D1ED86E42002963A2 /* main.m */; };
 		8C630F511ED86E43002963A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C630F501ED86E43002963A2 /* AppDelegate.m */; };
 		8C630F571ED86E43002963A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C630F551ED86E43002963A2 /* LaunchScreen.storyboard */; };
@@ -59,6 +61,8 @@
 		8C023B611ED9764300AB96BF /* TeachersListRequestOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachersListRequestOp.m; sourceTree = "<group>"; };
 		8C023B631ED97A2F00AB96BF /* TeachersListOp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeachersListOp.h; sourceTree = "<group>"; };
 		8C023B641ED97A2F00AB96BF /* TeachersListOp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeachersListOp.m; sourceTree = "<group>"; };
+		8C023B661ED990ED00AB96BF /* Delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete@3x.png"; sourceTree = "<group>"; };
+		8C023B671ED990ED00AB96BF /* Mark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mark@3x.png"; sourceTree = "<group>"; };
 		8C630F491ED86E42002963A2 /* EmerShool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmerShool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C630F4D1ED86E42002963A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C630F4F1ED86E43002963A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 		8C630F8A1ED89A1C002963A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C023B661ED990ED00AB96BF /* Delete@3x.png */,
+				8C023B671ED990ED00AB96BF /* Mark@3x.png */,
 				8C630F8B1ED89A1C002963A2 /* baby-boy@3x.png */,
 				8C630F8C1ED89A1C002963A2 /* couple@3x.png */,
 				8C630F8D1ED89A1C002963A2 /* family@3x.png */,
@@ -343,7 +349,9 @@
 				8E80AFEE1ED8D740004ED08A /* TeacherCell.xib in Resources */,
 				8C630F891ED8997A002963A2 /* Credits.plist in Resources */,
 				8C630F5C1ED86E43002963A2 /* Assets.xcassets in Resources */,
+				8C023B691ED990ED00AB96BF /* Mark@3x.png in Resources */,
 				8C023B5F1ED972FC00AB96BF /* teacher_list.plist in Resources */,
+				8C023B681ED990ED00AB96BF /* Delete@3x.png in Resources */,
 				8C630F571ED86E43002963A2 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

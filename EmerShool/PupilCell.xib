@@ -122,7 +122,6 @@
                 <outlet property="letftBoxView" destination="3bY-qn-OWy" id="niF-U8-ko2"/>
                 <outlet property="letftBoxViewWidthContstrain" destination="wbU-a1-xSL" id="3hN-dy-4Ge"/>
                 <outlet property="ratingLabelCell" destination="ANU-04-Xiq" id="Ldi-Jg-gdN"/>
-                <outlet property="teacherWeightLabel" destination="vOH-Ca-UJO" id="wrt-hj-7Xd"/>
             </connections>
             <point key="canvasLocation" x="26" y="83"/>
         </tableViewCell>

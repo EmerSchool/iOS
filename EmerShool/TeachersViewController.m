@@ -28,17 +28,6 @@ CGFloat const kAddTeacherToolbarOffset = 44.0f;
     [self loadServerDataCompletion:^(NSError * _Nullable error, NSArray<NSDictionary *> * _Nullable teachersList) {
         completion(nil, nil);
     }];
-//    __weak TeachersViewController *this = self;
-//    TeachersListOp *teachersListOp = [[TeachersListOp alloc] initWithCompletion:^(NSError * _Nullable error, NSArray<NSDictionary *> * _Nullable teachersList) {
-//        if (teachersList && teachersList.count)
-//            [this.serverData addObjectsFromArray:teachersList];
-//        else
-//            [this.serverData removeAllObjects];
-//        
-//        completion(nil, nil);
-//        
-//    } token:self.authHandler.token];
-//    [self.defaultQueue addOperation:teachersListOp];
 }
 
 
@@ -67,6 +56,8 @@ CGFloat const kAddTeacherToolbarOffset = 44.0f;
         cellData.subTitleCell = item[@"subject"];
         cellData.reusIdCell = kTeacherCellReuseId;
         cellData.bollValue = [item[@"isAccepted"] boolValue];
+        cellData.scoreValue = item[@"score"];
+        cellData.rateValue = item[@"rate"];
         [listItems addObject:cellData];
     }
     
@@ -94,8 +85,10 @@ CGFloat const kAddTeacherToolbarOffset = 44.0f;
     CellMetaData *cellData = row[indexPath.row];
     ((TeacherCell *)cell).cellTitleLabel.text = cellData.titleCell;
     ((TeacherCell *)cell).cellSubtitleLabel.text = cellData.subTitleCell;
-    UIImage *image =  [UIImage imageNamed:cellData.bollValue ? @"connect" : @"cancel"];
+    UIImage *image =  [UIImage imageNamed:cellData.bollValue ? @"Mark" : @"Delete"];
     ((TeacherCell *)cell).leftIconImageView.image = image;
+    ((TeacherCell *)cell).ratingLabelCell.text = cellData.rateValue;
+    ((TeacherCell *)cell).teacherWeightLabel.text = cellData.scoreValue;
 }
 
 - (IBAction)addTeacherTogglerButtonPressed:(id)sender {

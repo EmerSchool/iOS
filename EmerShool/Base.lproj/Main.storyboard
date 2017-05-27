@@ -29,11 +29,39 @@
                                     <action selector="logoffButtonPressed:" destination="01J-lp-oVM" eventType="touchUpInside" id="sVM-W9-jpQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оби-Ван Кеноби" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xun-vb-0gL">
+                                <rect key="frame" x="36" y="80" width="342" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr-code" translatesAutoresizingMaskIntoConstraints="NO" id="17A-23-6oO">
+                                <rect key="frame" x="87" y="130" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="RNc-eH-on9"/>
+                                    <constraint firstAttribute="width" constant="240" id="dDk-k2-yOi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0f55f3d783d205b685d97bb7e2152a4b06196bed" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gla-YV-DSB">
+                                <rect key="frame" x="36" y="400" width="342" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yBY-2M-zax" secondAttribute="trailing" constant="10" id="2Fo-6N-kxj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gla-YV-DSB" secondAttribute="trailing" constant="16" id="8Rh-ZL-H3W"/>
+                            <constraint firstItem="Xun-vb-0gL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="16" id="Ebv-ad-aOP"/>
+                            <constraint firstItem="17A-23-6oO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="67" id="HuF-Ib-6DS"/>
                             <constraint firstItem="yBY-2M-zax" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="10" id="May-Sd-LWh"/>
+                            <constraint firstItem="17A-23-6oO" firstAttribute="top" secondItem="Xun-vb-0gL" secondAttribute="bottom" constant="26" id="OAW-kj-JhB"/>
+                            <constraint firstItem="Xun-vb-0gL" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="60" id="QE8-wO-L8W"/>
+                            <constraint firstItem="gla-YV-DSB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="16" id="TcJ-zF-Caz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xun-vb-0gL" secondAttribute="trailing" constant="16" id="iHT-PK-T3O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="17A-23-6oO" secondAttribute="trailing" constant="67" id="sHO-0u-TPx"/>
+                            <constraint firstItem="gla-YV-DSB" firstAttribute="top" secondItem="17A-23-6oO" secondAttribute="bottom" constant="30" id="tl3-nQ-Q84"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Я" image="baby-boy.png" id="e6o-Je-i5Z"/>
@@ -43,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-743" y="-521"/>
+            <point key="canvasLocation" x="-743.47826086956525" y="-521.73913043478262"/>
         </scene>
         <!--Мои учителя-->
         <scene sceneID="ABn-xz-3cx">
@@ -60,9 +88,9 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tto-ex-PhM">
                                 <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem width="290" style="plain" id="bpU-DN-SD1">
+                                    <barButtonItem width="270" style="plain" id="bpU-DN-SD1">
                                         <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите или вставьте ID" textAlignment="natural" minimumFontSize="17" id="aDC-tA-43o">
-                                            <rect key="frame" x="20" y="7" width="290" height="30"/>
+                                            <rect key="frame" x="20" y="7" width="270" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -4775,5 +4803,6 @@ AAAAAAAEDtA
         </image>
         <image name="couple.png" width="21" height="21"/>
         <image name="family.png" width="21" height="21"/>
+        <image name="qr-code" width="595" height="842"/>
     </resources>
 </document>

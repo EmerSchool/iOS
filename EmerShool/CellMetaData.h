@@ -19,6 +19,10 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) NSString *reusIdCell;
 @property (strong, nonatomic) NSString *titleCell;
 @property (strong, nonatomic) NSString *subTitleCell;
+@property (strong, nonatomic) NSString *scoreValue;
+@property (strong, nonatomic) NSString *rateValue;
+
+
 @property BOOL bollValue;
 
 @end

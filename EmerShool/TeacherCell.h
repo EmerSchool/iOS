@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *cellSubtitleLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabelCell;
+@property (weak, nonatomic) IBOutlet UILabel *teacherWeightLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *editRatingButton;
 - (IBAction)changeRatingBtnPressed:(id)sender;

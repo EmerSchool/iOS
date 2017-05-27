@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiO-QJ-KUH">
                         <rect key="frame" x="0.0" y="0.0" width="62" height="113.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="hwK-NN-Xvs">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="connect" translatesAutoresizingMaskIntoConstraints="NO" id="hwK-NN-Xvs">
                                 <rect key="frame" x="10" y="36" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="fSE-RH-Lro"/>
@@ -67,36 +67,36 @@
                         <rect key="frame" x="238" y="0.0" width="82" height="113.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmg-b6-bGY">
-                                <rect key="frame" x="8" y="38" width="66" height="21"/>
+                                <rect key="frame" x="8" y="37" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMF-FB-kqD">
-                                <rect key="frame" x="8" y="67" width="66" height="22"/>
+                                <rect key="frame" x="8" y="66" width="66" height="22"/>
                                 <connections>
                                     <action selector="changeLinkStatusBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="mUB-YJ-Sdb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtt-8o-XSB">
-                                <rect key="frame" x="8" y="8" width="66" height="22"/>
-                                <connections>
-                                    <action selector="changeRatingBtnPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="99g-Gp-T3r"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1550" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-Is-O61">
+                                <rect key="frame" x="8" y="8" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Piz-Is-O61" firstAttribute="leading" secondItem="DBD-YS-vea" secondAttribute="leading" constant="8" id="0lF-Yn-RgN"/>
                             <constraint firstAttribute="trailing" secondItem="kMF-FB-kqD" secondAttribute="trailing" constant="8" id="67f-7q-wjs"/>
-                            <constraint firstAttribute="trailing" secondItem="Gtt-8o-XSB" secondAttribute="trailing" constant="8" id="8wV-j3-GLw"/>
                             <constraint firstItem="Zmg-b6-bGY" firstAttribute="leading" secondItem="DBD-YS-vea" secondAttribute="leading" constant="8" id="DcG-1L-Upx"/>
                             <constraint firstAttribute="trailing" secondItem="Zmg-b6-bGY" secondAttribute="trailing" constant="8" id="IZB-RG-5Wo"/>
-                            <constraint firstItem="Zmg-b6-bGY" firstAttribute="top" secondItem="Gtt-8o-XSB" secondAttribute="bottom" constant="8" id="JeN-vy-WFz"/>
                             <constraint firstAttribute="width" constant="82" id="YXR-sA-n9T"/>
+                            <constraint firstItem="Piz-Is-O61" firstAttribute="top" secondItem="DBD-YS-vea" secondAttribute="top" constant="8" id="YYb-aT-Ins"/>
+                            <constraint firstAttribute="trailing" secondItem="Piz-Is-O61" secondAttribute="trailing" constant="8" id="gwp-D4-89Y"/>
                             <constraint firstItem="kMF-FB-kqD" firstAttribute="leading" secondItem="DBD-YS-vea" secondAttribute="leading" constant="8" id="hmo-y1-Tpb"/>
-                            <constraint firstItem="Gtt-8o-XSB" firstAttribute="top" secondItem="DBD-YS-vea" secondAttribute="top" constant="8" id="p44-OX-BVz"/>
+                            <constraint firstItem="Zmg-b6-bGY" firstAttribute="top" secondItem="Piz-Is-O61" secondAttribute="bottom" constant="8" id="mVG-8g-RFx"/>
                             <constraint firstItem="kMF-FB-kqD" firstAttribute="top" secondItem="Zmg-b6-bGY" secondAttribute="bottom" constant="8" id="szO-NH-QGc"/>
-                            <constraint firstItem="Gtt-8o-XSB" firstAttribute="leading" secondItem="DBD-YS-vea" secondAttribute="leading" constant="8" id="vwN-xh-tmX"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kMF-FB-kqD" secondAttribute="bottom" constant="8" id="xUj-gX-rh1"/>
                         </constraints>
                     </view>
@@ -118,11 +118,11 @@
                 <outlet property="cellSubtitleLabel" destination="ttk-iV-bOW" id="3pP-NO-WfL"/>
                 <outlet property="cellTitleLabel" destination="nRc-6u-BI7" id="ziK-N2-1gj"/>
                 <outlet property="changeLinkStatusButton" destination="kMF-FB-kqD" id="f15-4Z-KwQ"/>
-                <outlet property="editRatingButton" destination="Gtt-8o-XSB" id="nMj-i4-8n9"/>
                 <outlet property="leftIconImageView" destination="hwK-NN-Xvs" id="cL2-H2-wIE"/>
                 <outlet property="letftBoxView" destination="aiO-QJ-KUH" id="oXs-aR-Wlc"/>
                 <outlet property="letftBoxViewWidthContstrain" destination="EUB-72-qOa" id="hNV-IB-6hZ"/>
                 <outlet property="ratingLabelCell" destination="Zmg-b6-bGY" id="Z2M-fz-R7O"/>
+                <outlet property="teacherWeightLabel" destination="Piz-Is-O61" id="VwU-uf-xKf"/>
             </connections>
             <point key="canvasLocation" x="26" y="83.5"/>
         </tableViewCell>
